@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.instaProject {
+    background-color: #000;
+    color: #fff;
+    width: 22%;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    height: 500px;
+}
+.box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+}
+#plus{
+    margin-left: 95%;
+}
+
+.image{
+    margin-left: 135%;
+}
+
+.profile {
+    display: grid;
+    gap: 10px;
+
+    padding: 10px;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.pic {
+    width: 80px;
+    height: 80px;
+}
+
+.pic img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.bioName {
+    padding: 10px;
+}
+
+.buttons {
+    width: 95%;
+    margin: auto;
+}
+
+button,
+#addIcon {
+    background-color: rgba(255, 255, 255, 0.137);
+    border-radius: 4px;
+    padding: 4px;
+    border: none;
+    color: white;
+    width: 40%;
+
+}
+/* General body styling */
+
+/* Profile Edit Modal Container */
+#profileChanger {
+    height: auto;
+    width: 350px;
+    border-radius: 12px;
+    padding: 20px;
+    background-color: #1e1e1e; /* Dark background for the form */
+    color: #e0e0e0; /* Light text color */
+    display: none;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Center the container */
+#pc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Style the labels */
+#pc label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #b0b0b0; /* Lighter gray color for labels */
+    transition: color 0.3s ease-in-out; /* Smooth label color transition */
+}
+
+/* Input fields for text */
+#name, #Usernamee, #pronoun, #bio, #link {
+    background-color: #333333; /* Dark background for input fields */
+    color: #ffffff; /* White text */
+    border: 1px solid #555555; /* Subtle border */
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Focus effect on input fields */
+#name:focus, #Usernamee:focus, #pronoun:focus, #bio:focus, #link:focus {
+    border-color: #3b82f6; /* Blue border when focused */
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5); /* Blue glow around input */
+}
+
+/* Hover effect for labels */
+#pc input[type="text"]:hover, label:hover {
+    color: #ffffff; /* White color for label text on hover */
+}
+
+/* File input styling */
+#fileInput {
+    padding: 12px;
+    background-color: #333333; /* Dark background */
+    color: #ffffff; /* White text */
+    border: 1px solid #555555; /* Subtle border */
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* File input hover effect */
+#fileInput:hover {
+    background-color: #444444; /* Slightly lighter background on hover */
+    border-color: #3b82f6; /* Border turns blue on hover */
+}
+
+/* Submit button styling */
+#pc input[type="submit"] {
+    background-color: #3b82f6; /* Instagram-like blue */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth color and transform transitions */
+    width: 100%; /* Full width */
+}
+
+/* Submit button hover effect */
+#pc input[type="submit"]:hover {
+    background-color: #2563eb; /* Darker blue */
+    transform: translateY(-2px); /* Slightly lift the button on hover */
+}
+
+/* Submit button focus effect */
+#pc input[type="submit"]:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5); /* Blue glow on focus */
+}
+
+/* Optional clean styling for file input section */
+input[type="file"] {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+/* Make the file input and label look cleaner */
+input[type="file"]:hover {
+    border-color: #3b82f6;
+}
+
+/* Smooth animations for form transition */
+#profileChanger {
+    animation: fadeIn 0.5s ease-in-out; /* Fade in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Scrollbar customization for the container */
+#profileChanger::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+#profileChanger::-webkit-scrollbar-thumb {
+    background-color: #555555; /* Darker thumb */
+    border-radius: 10px;
+}
+
+/* Adjust spacing for form inputs and labels */
+input[type="submit"], input[type="text"], input[type="file"] {
+    margin-top: 10px; /* Add consistent spacing */
+}
+
+/* Hide the default focus outline on form elements */
+input:focus, button:focus {
+    outline: none;
+}
